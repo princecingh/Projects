@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Playlist Duration Calculator</title>
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet">
+  <style>
+    /* Reset and set box-sizing */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Full-screen gradient background and centering all content */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Glassmorphism-inspired container */
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    /* Styled input field */
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    /* Stylish button with rounded edges and smooth hover effect */
+    button {
+      padding: 12px 30px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 25px;
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e65b50;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Playlist Duration Calculator</h1>
+    <form action="calculate" method="get">
+      <input type="text" name="playlistUrl" placeholder="Enter YouTube Playlist URL" required>
+      <br>
+      <button type="submit">Calculate Duration</button>
+    </form>
+  </div>
+</body>
+</html>
